@@ -1,5 +1,6 @@
 import streamlit as st
-from Main import Model, Analyzer
+from utils.prediction_process_manager import Model
+from utils.stock_analyzer import Analyzer
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 import datetime as dt
@@ -37,12 +38,12 @@ if page == "Future Prediction":
     if button:
         try:
             with st.spinner("Please wait..."):
-                pred_df = model.main(selected_stock_symbol)  
+                pred_df = model.main(selected_stock_symbol)
                 st.success("Prediction is done!")
             fig = model.show_actual_pred(selected_stock)
             st.plotly_chart(fig)
-        except:
-            pass     
+        except Exception as e:
+            print(f"Error during the prediction for the stock! {e}")
             
 if page == "Data Analysis":
     st.markdown("<h2 style = 'text-align:center;'> Stock Analysis </h2>", unsafe_allow_html = True)
