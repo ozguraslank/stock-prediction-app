@@ -15,6 +15,11 @@ It also provides comprehensive analysis about the statistics of a spesific stock
 ### 1. Clone The Repository to Your Local
 ` git clone https://github.com/ozguraslank/stock-prediction-app.git `
 
+### OPTIONAL: Docker (Skip step 2, 3, 4 and 5 If you are going to use Docker for launch)
+` docker build -t <IMAGE_NAME> . ` <br>
+` docker run -p 8501:8501 <IMAGE_NAME> `
+
+
 ### 2. Create a New Python environment to Avoid Conflicts (Dockerfile Will be Added Soon)
 ` python3 -m venv <ENV_NAME> `
 
