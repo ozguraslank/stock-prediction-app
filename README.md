@@ -20,7 +20,7 @@ It also provides comprehensive analysis about the statistics of a spesific stock
 ` docker run -p 8501:8501 <IMAGE_NAME> `
 
 
-### 2. Create a New Python environment to Avoid Conflicts (Dockerfile Will be Added Soon)
+### 2. Create a New Python environment to Avoid Conflicts
 ` python3 -m venv <ENV_NAME> `
 
 ### 3. Change The Environment
