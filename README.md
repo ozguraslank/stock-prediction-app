@@ -34,15 +34,10 @@ It also provides comprehensive analysis about the statistics of a spesific stock
 ### 4. Install The Required Packages Given In requirements.txt
 ` pip3 install -r requirements.txt ` 
 
-### 5. Run The Web Application
+### 5. Go to Source Folder and Run The Application
+` cd src ` 
 ` streamlit run app.py ` 
 
 ---------------------------------
 After these steps, your web app will be deployed on web, both in localhost and network. <br>
 URL for both localhost and network will be shown in the console after executing the command given in step 5.
-
-
-
-
-
-
