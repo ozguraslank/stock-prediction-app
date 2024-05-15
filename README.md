@@ -35,7 +35,7 @@ It also provides comprehensive analysis about the statistics of a spesific stock
 ` pip3 install -r requirements.txt ` 
 
 ### 5. Go to Source Folder and Run The Application
-` cd src ` 
+` cd src ` <br>
 ` streamlit run app.py ` 
 
 ---------------------------------
