@@ -3,6 +3,10 @@
 Stock price prediction app provides future price predictions for the S&P 100 Index stocks for next 90 days by using artificial intelligence models. <br>
 It also provides comprehensive analysis about the statistics of a spesific stock in a desired time interval.
 
+## Deployed Application URLs
+* **Prod:** https://stock-price-prediction-app.streamlit.app
+* **Dev:**  https://dev-stock-price-prediction-app.streamlit.app
+
 ## Application Overview
 
 ### Stock Price Prediction Page (Home Page)
