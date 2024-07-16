@@ -1,2 +1,2 @@
-app_env
+.venv
 *__pycache__

@@ -1,4 +1,4 @@
-![Python versions](https://img.shields.io/badge/python_3.8-blue)
+![Python versions](https://img.shields.io/badge/python_3.11+-blue)
 # Stock Price Prediction App
 Stock price prediction app provides future price predictions for the S&P 100 Index stocks for next 90 days by using artificial intelligence models. <br>
 It also provides comprehensive analysis about the statistics of a spesific stock in a desired time interval.

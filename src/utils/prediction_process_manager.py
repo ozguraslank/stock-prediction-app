@@ -236,13 +236,11 @@ class Model:
         )
 
         catboost_pred = catboost_pred[:len(prophet_pred)]
-
         pred_df = ARMA_ARIMA_pred.copy().rename(columns = {"Close": "ARMA-ARIMA"})
         pred_df["Prophet"] = prophet_pred["Close"].values
         pred_df["CatBoost"] = catboost_pred["Close"].values
 
         pred_df.set_index("Date", inplace = True)
-        
         return pred_df
     
     
@@ -257,8 +255,6 @@ class Model:
             preds : Pandas dataframe
                 Predictions of the stock
         """
-
-
         # Calculate the RMSE score
         RMSE = round(np.sqrt(mean_squared_error(test_data["Close"], preds[:len(test_data)])), 2)
 
@@ -279,8 +275,8 @@ class Model:
         # RMSE scores of each model will be added in this dictionary, the format will be, MODEL_NAME: RMSE_SCORE
         RMSE_scores = {}
 
-        for column_name, column_data in pred_df.iteritems():
-            RMSE_scores[column_name] = self.calculate_RMSE(self.test_data, column_data)
+        for column in pred_df.columns:
+            RMSE_scores[column] = self.calculate_RMSE(self.test_data, pred_df[column].values)
 
         # Converting dictionary into dataframe
         RMSE_scores_df = pd.DataFrame(RMSE_scores.values(), columns = ["RMSE Score"], index = RMSE_scores.keys())
